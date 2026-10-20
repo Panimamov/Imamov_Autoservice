@@ -23,6 +23,8 @@ namespace Imamov_Autoservice
         public ServicePage()
         {
             InitializeComponent();
+            var currentService = Имамов_автосервисEntities.GetContext().Service.ToList();
+            ServiceListView.ItemsSource = currentService;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
