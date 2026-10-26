@@ -31,7 +31,7 @@ namespace Imamov_Autoservice
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AddEditPage());
+            Manager.MainFrame.Navigate(new AddEditPage(null));
         }
         private void UpdateServices()
         {
@@ -86,6 +86,23 @@ namespace Imamov_Autoservice
         private void RButtonUp_Checked(object sender, RoutedEventArgs e)
         {
             UpdateServices();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage(null));
+        }
+        private void EditButton_Click(Object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Service));
+        }
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                Имамов_автосервисEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                ServiceListView.ItemsSource = Имамов_автосервисEntities.GetContext().Service.ToList();  
+            }
         }
     }   
 }
