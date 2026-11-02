@@ -68,56 +68,59 @@
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="DocumentByService.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ImamovModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ImamovModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ImamovModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ImamovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ImamovModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ImamovModel.edmx</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Manufacturer.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPhoto.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductSale.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServicePhoto.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>ImamovModel.tt</DependentUpon>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Имамов_автосервис.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Имамов_автосервис.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Имамов_автосервис.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Имамов_автосервис.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Имамов_автосервис.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Имамов_автосервис.edmx</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -143,6 +146,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Page1.xaml.cs">
@@ -165,21 +172,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ImamovModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ImamovModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ImamovModel.edmx.diagram">
-      <DependentUpon>ImamovModel.edmx</DependentUpon>
-    </None>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <EntityDeploy Include="Имамов_автосервис.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Имамов_автосервис.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Имамов_автосервис.edmx.diagram">
+      <DependentUpon>Имамов_автосервис.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="IMG\service_logo.png" />
@@ -191,16 +196,6 @@
     <Resource Include="ImamovModel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ImamovModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ImamovModel.Context.cs</LastGenOutput>
-      <DependentUpon>ImamovModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="ImamovModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ImamovModel.edmx</DependentUpon>
-      <LastGenOutput>ImamovModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="IMG\picture.png" />
     <Resource Include="Услуги автосервиса\diz.jpg" />
     <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
@@ -222,6 +217,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Имамов_автосервис.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Имамов_автосервис.edmx</DependentUpon>
+      <LastGenOutput>Имамов_автосервис.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Имамов_автосервис.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Имамов_автосервис.edmx</DependentUpon>
+      <LastGenOutput>Имамов_автосервис.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

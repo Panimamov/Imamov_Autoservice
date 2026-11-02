@@ -43,11 +43,11 @@ namespace Imamov_Autoservice
             var currentServices = Имамов_автосервисEntities.GetContext().Service.ToList();
             if (ComboType.SelectedIndex  == 0)
             {
-                currentServices = currentServices.Where(p => (p.Discount == null || (p.Discount >= 0 && p.Discount <= 1))).ToList();
+                currentServices = currentServices.Where(p => ((p.Discount >= 0 && p.Discount <= 1))).ToList();
             }
             if (ComboType.SelectedIndex == 1)
             {
-                currentServices = currentServices.Where(p => (p.Discount == null || p.Discount >= 0 && p.Discount < 0.05)).ToList();
+                currentServices = currentServices.Where(p => (p.Discount >= 0 && p.Discount < 0.05)).ToList();
             }
             if (ComboType.SelectedIndex == 2)
             {
@@ -234,6 +234,11 @@ namespace Imamov_Autoservice
         private void RightDirButton_Click(object sender, RoutedEventArgs e)
         {
             ChangePage(2, null);
+        }
+
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new SignUpPage((sender as Button).DataContext as Service));
         }
     }   
 }

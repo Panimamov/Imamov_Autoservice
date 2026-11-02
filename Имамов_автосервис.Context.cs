@@ -16,12 +16,11 @@ namespace Imamov_Autoservice
     public partial class Имамов_автосервисEntities : DbContext
     {
         private static Имамов_автосервисEntities _context;
+
         public static Имамов_автосервисEntities GetContext()
         {
             if (_context == null)
-            {
                 _context = new Имамов_автосервисEntities();
-            }
             return _context;
         }
         public Имамов_автосервисEntities()
